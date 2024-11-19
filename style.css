@@ -29,6 +29,7 @@ section{
 p, h1, ul, h5, img, .twoBalls{
     background-color: black;
     list-style: none;
+    text-align: center;
 }
 header{
     *{background: none;}
