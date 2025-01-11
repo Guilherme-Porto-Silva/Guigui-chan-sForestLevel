@@ -1,62 +1,73 @@
-.padding{padding: 1%;}
-.column, .row{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.row{
-    flex-direction: row;
-    justify-content: space-around;
-}
-.outlineStyle{
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: #ffffff;
-}
+html{ font-size: 62.2%; }
 body{
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
     background-image: url("./src/leafWall.jpg");
     color: #ffffff;
-    font-size: large;
 }
 section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+main{
+    display: grid;
+   img, h5, p{
+        width: 100%;
+        margin: 5px;
+    }
+    li{ background-color: black; }
+}
+p{
+    width: 80%;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+}
+header div{
+    width: 0.8em;
+    height: min-content;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
+a:hover{ color: magenta; }
+h1{ padding: 0.5rem; }
+ul{ list-style: none; }
+li{ text-align: left; }
+header img{ width: 0.1em; }
+.blackBack{ background-color: black; }
+.outlineStyle{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #ffffff;
+}
+.threeColumns{
+    grid-template-columns: repeat(3, 32%);
+    grid-auto-rows: 15rem;
+    grid-column-gap: 1.111%;
+    grid-row-gap: 1vh;
+}
+.twoColumns{
+    grid-template-columns: repeat(2, 49%);
+    grid-auto-rows: 15rem;
+    grid-column-gap: 1%;
     width: 90%;
     margin: 5%;
 }
-p, h1, ul, h5, img, .twoBalls{
-    background-color: black;
-    list-style: none;
-    text-align: center;
+@media screen and (min-width: 850px) {
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-header{
-    *{background: none;}
-    width: 80%;
-    margin: 1% 10%;
-    font-size: larger;
-    div{
-        background-image: url("./src/LOGico.png");
-        img{
-            position: absolute;
-            top: 10%;
-            left: 70%;
-        }
-    }
-}
-a{color: aqua;}
-a:hover{color: orangered;}
-@media screen and (max-width: 850px) {
-    *{font-size: medium;}
-    .row{flex-direction: column;}
     section{
-        width: 100%;
-        margin: 0;
+        width: 90vw;
+        margin: 5vw;
     }
-    header div img{display: none;}
-}
-@media screen and (max-width: 400px) {
-    *{font-size: small;}
-    img{width: 60%;}
 }
