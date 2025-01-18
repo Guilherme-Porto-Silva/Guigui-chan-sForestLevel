@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+}
+body{
+    background-image: url("./src/leafWall.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    justify-content: space-around;
+}
+header{
+    width: 90%;
+    margin: 5%;
+    font-size: larger;
+  *{ position: relative; }
+    div{
+        width: 100%;
+        padding: 1%;
+        h1{ justify-self: flex-start; }
+        img{
+            position: absolute;
+            top: 1%;
+            right: 10%;
+            width: 20%;
+        }
+   }
+    div, li{
+        margin: 1%; 
+        text-align: left;
+    }
+    ul{ align-self: baseline; }
+}
+a{ color: aqua; }
+a:hover{ color: lime; }
+p{ width: 70%; }
+.sheet{
+    outline: 5px ridge #ffffff;
+    background-color: black;
+}
+.column, .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.gray{ color: gray; }
+@media screen and (max-width: 500px) { header div img{ display: none; } }
+@media screen and (min-width: 900px) { 
+    .row{
+        flex-direction: row;
+        width: 80%;
+    }
+    *{ font-size: larger; }
+ }
